@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#5EFFF9D9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/swpcards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:translationZ="1dp"
+        android:textSize="18sp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/opisd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toTopOf="@id/imed" />
+
+    <LinearLayout
+        android:id="@+id/dyn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/imed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/imeg">
+        <TextView
+            android:id="@+id/ime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Andrija"
+            android:textSize="40sp"
+            android:fontFamily="@font/bold"
+            android:textColor="#FFF"
+            />
+        <TextView
+            android:id="@+id/godine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/light"
+            android:text="24"
+            android:paddingLeft="20dp"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/sena"
+        app:layout_constraintBottom_toBottomOf="@id/doli"
+        app:layout_constraintTop_toTopOf="@id/imeg"
+        android:alpha="0.4"
+        app:layout_constraintLeft_toLeftOf="@id/levo"
+        app:layout_constraintRight_toRightOf="@id/desno"
+        android:translationZ="-1dp"
+        />
+
+    <TextView
+        android:id="@+id/swpcards1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Opis"
+        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="10dp"
+        android:translationZ="1dp"
+        app:layout_constraintTop_toTopOf="@id/imed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/opisd"
+        />
+    <TextView
+        android:id="@+id/kategorije"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Kategorije"
+        android:layout_marginLeft="10dp"
+        android:textSize="25sp"
+        android:textColor="#FFFFFF"
+        android:translationZ="1dp"
+        app:layout_constraintTop_toTopOf="@id/opisd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/katd"
+        />
+
+
+    <ImageView
+        android:id="@+id/event_pic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:translationZ="-2dp"
+        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintTop_toTopOf="@id/katd">
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/lokacija"
+            android:maxWidth="40dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/lokacija"
+            android:fontFamily="@font/regular"
+            android:textColor="#FFFFFF"
+            android:hint="Lokacija"
+            android:textSize="25sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/vrijeme"
+            android:textColor="#FFFFFF"
+            android:hint="Datum"
+            android:textSize="30sp"
+            android:fontFamily="@font/regular"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/datum"
+            android:maxWidth="40dp"
+            />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imeg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.75" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/levo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="-0.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/desno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.1" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/doli"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1.04" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/imed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.83" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/opisd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/katd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
